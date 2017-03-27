@@ -18,7 +18,7 @@
         fclose($fh);
         $file = "/monitor/algo.txt";
         $fh = fopen($file,"w");
-        fwrite($fh, $algo;
+        fwrite($fh, $algo);
         fclose($fh);
     }
     catch(Exception $e){
