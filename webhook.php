@@ -14,7 +14,7 @@
         fclose($fh);
         $file = "/monitor/payload.txt";
         $fh = fopen($file,"w");
-        fwrite($fh, $payload;
+        fwrite($fh, $payload);
         fclose($fh);
         $file = "/monitor/algo.txt";
         $fh = fopen($file,"w");
