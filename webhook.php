@@ -4,7 +4,7 @@
 	$signature = $_SERVER['HTTP_X-HUB-SIGNATURE'];
         $payload = file_get_contents('php://input');
         list($algo, $hash) = explode('=', $signature, 2);
-        $file = "/monitor/status.txt";
+        $file = "/monitor/status/status.txt";
         $fh = fopen($file,"w");
         fwrite($fh, microtime());
         fclose($fh);
