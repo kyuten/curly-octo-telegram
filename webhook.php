@@ -2,7 +2,9 @@
     try{
         $file = "/monitor/status.txt";
         $fh = fopen($file,"w");
-        fwrite($fh,microtime());
+	foreach($_POST as $k=>$p){
+	        fwrite($fh,"$k:$p\n");
+	}
         fclose($fh);
     }
     catch Exception($e){
