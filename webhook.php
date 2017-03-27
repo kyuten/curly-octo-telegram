@@ -2,9 +2,11 @@
     try{
         $file = "/monitor/status.txt";
         $fh = fopen($file,"w");
-	foreach($_POST as $k=>$p){
-	        fwrite($fh,"$k:$p\n");
-	}
+//	foreach($_POST as $k=>$p){
+//	        fwrite($fh,"$k:$p\n");
+//	}
+	$headers = getallheaders();
+	fwrite($fh, $headers['X-Hub-Signature']);
         fclose($fh);
     }
     catch(Exception $e){
