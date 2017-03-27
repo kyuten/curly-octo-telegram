@@ -6,7 +6,7 @@
 #	        fwrite($fh,"$k:$p\n");
 #	}
 #	$headers = getallheaders();
-	fwrite($fh, $_SERVER['X-Hub-Signature']);
+	fwrite($fh, $_SERVER['HTTP_X-Hub-Signature']);
         fclose($fh);
     }
     catch(Exception $e){
