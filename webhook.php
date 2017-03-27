@@ -7,7 +7,7 @@
 	}
         fclose($fh);
     }
-    catch Exception($e){
+    catch(Exception $e){
         echo "Unable to complete the operation. Sorry about that.";
     }
 ?>
